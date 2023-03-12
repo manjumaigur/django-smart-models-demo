@@ -1,0 +1,10 @@
+{
+  "OPAI": {
+    "name": "openai",
+    "configs": "openai.json"
+  },
+  "STBAI": {},
+  "GCP": {},
+  "AZURE": {},
+  "AWS": {}
+}
