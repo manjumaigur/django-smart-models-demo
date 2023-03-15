@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "aihub",
+    "smart_models",
+    "demo",
 ]
 
 MIDDLEWARE = [
@@ -118,6 +119,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_DIR = BASE_DIR / "static"
+MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = "/media/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -127,6 +131,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AI_API_SETTINGS = {
     "openai": {
         "key": os.getenv("OPENAI_API_KEY"),
-        "organization": os.getenv("OPENAI_ORGANIZATION"),
+    },
+    "stability_ai": {
+        "key": os.getenv("STABILITYAI_API_KEY"),
+        "host": "grpc.stability.ai:443",
     },
 }
